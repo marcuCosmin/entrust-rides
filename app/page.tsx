@@ -1,103 +1,152 @@
-import Image from "next/image";
+const descriptiveCards = [
+  {
+    title: "Punctuality",
+    content:
+      "We understand the importance of being on time for appointments and school. We take pride in our punctuality, ensuring that your children arrive promptly and safely to their destinations.",
+  },
+  {
+    title: "Specialised Care",
+    content:
+      "Our team of trained drivers and attendants specialises in caring for individuals with diverse needs, including those with disabilities, medical conditions, and mobility challenges.",
+  },
+  {
+    title: "Safety Is Our Priority",
+    content:
+      "Safety is at the heart of everything we do. Our vehicles are equipped with the latest safety features, and our drivers are extensively trained to handle any situation with utmost care.",
+  },
+  {
+    title: "Accessibility",
+    content:
+      "Our vehicles are specially designed for accessibility, accommodating wheelchairs, mobility aids, and any specific requirements your loved ones may have. Everyone deserves a comfortable journey.",
+  },
+]
+
+const servicesOffered = [
+  {
+    title: "School Transportation",
+    content:
+      "We ensure that special needs children have access to quality education by safely transporting them to and from school.",
+  },
+  {
+    title: "Medical Appointments",
+    content:
+      "We understand that medical appointments are critical. We provide a reliable service to ensure your loved ones receive the care they need.",
+  },
+  {
+    title: "Community Involvement",
+    content:
+      "We actively participate in community initiatives, collaborating with schools, medical facilities, and support organisations to enhance the quality of life for vulnerable community members.",
+  },
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex flex-col items-center">
+      <section className="py-32 sm:pb-80 md:pb-[25rem] lg:py-64 lg:pb-[30rem] px-container text-white bg-[url('/home-background.jpg')] bg-no-repeat bg-cover bg-center bg-overlay w-full text-center sm:text-left">
+        <h1 className="tracking-[0.4rem] text-lg sm:text-xl">
+          Welcome to Cool Cars
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <article className="mt-16 flex flex-col gap-16 max-w-2xl">
+          <h2 className="text-3xl sm:text-5xl font-semibold">
+            School and Community Transportation Services
+          </h2>
+          <p>
+            At Cool Cars, we understand that access to essential appointments
+            and educational opportunities is a fundamental right for all
+            individuals, regardless of their unique needs. Our mission is to
+            ensure safe, reliable, and compassionate transportation for special
+            needs children and vulnerable members of our community to their
+            appointments and schools.
+          </p>
+        </article>
+
+        <svg
+          className="rotate-180 fill-white w-full absolute bottom-[-1px] left-0"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1920 192"
+          preserveAspectRatio="none"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <path
+            d="M0,6.2c0,0,6.3-1.3,20.9,2.1c15.2,3.5,30.1,10.2,39.4,14.4s98.3,48,163.8,59.9c63.4,11.5,95.6,13.2,175.5,1
+s197.2-40.7,341.7-11.9s289.9,79.7,323.3,88.7c33.2,9,113.3,35.5,246.3,31.1c133-4.4,176.8-28.2,234.2-54.3S1760.5,39.6,1920,40V0.1
+H0V6.2z"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </svg>
+      </section>
+
+      <div className="flex flex-col md:flex-row gap-10 md:gap-20 lg:gap-40 w-full px-container">
+        <section>
+          <ul className="flex flex-col gap-10 items-center w-full sm:w-fit sm:grid sm:gap-10 sm:gird-rows-2 sm:grid-cols-2 mt-[-100px] md:mt-[-200px]">
+            {descriptiveCards.map((infoCardProps, index) => {
+              const { title, content } = infoCardProps
+              const indexIsEven = index % 2 === 0
+              const className = indexIsEven
+                ? "sm:mt-[-100px] md:mt-[-200px]"
+                : undefined
+
+              return (
+                <li
+                  key={index}
+                  className={`p-8 rounded-lg shadow-md md:max-w-md bg-white h-fit duration-500 ${className}`}
+                >
+                  <h3 className="text-2xl text-center font-semibold mb-4 text-black">
+                    {title}
+                  </h3>
+                  <p className="text-center text-md text-gray">{content}</p>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+
+        <section className="w-full md:w-1/2">
+          <h3 className="text-primary font-semibold text-lg mb-5">
+            Experienced team
+          </h3>
+          <article className="flex flex-col gap-5">
+            <h4 className="text-lg sm:text-3xl font-semibold text-black">
+              Care and safety for our clients
+            </h4>
+
+            <p>
+              We have established partnerships with prominent transport
+              companies as well as numerous care homes and healthcare service
+              providers to facilitate the transportation of individuals across
+              various age groups. This includes safely conveying children with
+              specific needs to educational institutions and assisting elderly
+              individuals with their medical appointments.
+            </p>
+            <p>
+              Our highly trained drivers possess the expertise required to
+              provide non-restraining and non-physical calming techniques when
+              dealing with individuals who may have various abilities. Thanks to
+              the comprehensive training and exceptional skills of our transport
+              supervisors, we have consistently managed challenging, or complex
+              behaviours without resorting to restraining methods.
+            </p>
+            <p>
+              All our drivers have completed certified courses, equipping them
+              to effectively handle unexpected challenges that may arise when
+              assisting individuals with physical restrictions or special needs.
+              Furthermore, our vehicles have received certification from the
+              Blue Lamp Trust, ensuring the secure loading, fastening, and
+              unloading of specialised accessibility equipment, such as
+              wheelchairs, in our accessibility vehicles.
+            </p>
+
+            <ul className="flex flex-col gap-5">
+              <p className="font-bold">Services We Offer:</p>
+              {servicesOffered.map(({ title, content }, index) => (
+                <p key={index}>
+                  <u>{title}</u> {content}
+                </p>
+              ))}
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+  )
 }
